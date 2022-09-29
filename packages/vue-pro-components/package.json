@@ -1,0 +1,36 @@
+{
+  "name": "vue-pro-components",
+  "version": "0.0.0",
+  "description": "pro components based on vue3",
+  "keywords": [
+    "components",
+    "vue3",
+    "vite",
+    "typescript",
+    "unplugin",
+    "on",
+    "demand",
+    "pro"
+  ],
+  "author": "jiangwenbin <wenbin.jiang@coollu.com.cn>",
+  "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+  }
+}
