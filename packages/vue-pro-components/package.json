@@ -1,6 +1,6 @@
 {
   "name": "vue-pro-components",
-  "version": "3.1.0",
+  "version": "0.0.0",
   "description": "pro components based on vue3",
   "keywords": [
     "components",
@@ -32,5 +32,12 @@
   },
   "bugs": {
     "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
   }
 }
