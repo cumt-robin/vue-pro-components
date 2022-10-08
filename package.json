@@ -8,6 +8,7 @@
     "lerna": "^5.3.0"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap -- --hoist"
+    "bootstrap": "lerna bootstrap -- --hoist",
+    "playground:dev": "lerna run --scope playground dev"
   }
 }
