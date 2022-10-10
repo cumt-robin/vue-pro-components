@@ -16,9 +16,7 @@ import { Icon } from "vue-pro-components"
   </div>
 
   <Icon icon="icon-up"></Icon>
-
   <br>
-  
   <Icon icon="icon-down"></Icon>
   <HelloWorld msg="Vite + Vue" />
 </template>
