@@ -1,16 +1,9 @@
 {
-  "name": "vue-pro-components",
-  "version": "0.0.1",
-  "description": "pro components based on vue3",
+  "name": "@vue-pro-components/utils",
+  "version": "0.0.0",
+  "description": "utils",
   "keywords": [
-    "components",
-    "vue3",
-    "vite",
-    "typescript",
-    "unplugin",
-    "on",
-    "demand",
-    "pro"
+    "utils"
   ],
   "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
@@ -28,12 +21,9 @@
     "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node ./__tests__/@vue-pro-components/utils.test.js"
   },
   "bugs": {
     "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
   }
 }
