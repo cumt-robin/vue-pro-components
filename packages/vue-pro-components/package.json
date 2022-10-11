@@ -22,7 +22,7 @@
   },
   "files": [
     "lib"
-  ],  
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -36,9 +36,7 @@
   "bugs": {
     "url": "https://github.com/cumt-robin/vue-pro-components/issues"
   },
-  "peerDe  },
-  "gitHead": "39ef12b70c50eb62e94933b0cad8f28cef305df7"
-encies": {
+  "peerDependencies": {
     "vue": "^3.2.0"
   }
 }
