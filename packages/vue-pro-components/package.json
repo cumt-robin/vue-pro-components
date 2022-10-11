@@ -12,7 +12,7 @@
     "demand",
     "pro"
   ],
-  "author": "jiangwenbin <wenbin.jiang@coollu.com.cn>",
+  "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
   "license": "MIT",
   "main": "index.js",
@@ -32,10 +32,6 @@
   },
   "bugs": {
     "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
