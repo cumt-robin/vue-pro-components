@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": false,
+        "jsx": "preserve",
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "strictNullChecks": true,
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+        "paths": {}
+    },
+    "include": ["**/*.ts", "**/*.tsx", "**/*.vue", "**/tests/**/*.ts", "**/tests/**/*.tsx", "**/components.d.ts"],
+    "exclude": ["node_modules"]
+}

@@ -11,6 +11,7 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true
     },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
     },

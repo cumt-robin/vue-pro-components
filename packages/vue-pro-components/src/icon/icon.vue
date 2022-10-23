@@ -7,7 +7,6 @@ export default {
     props: {
         icon: {
             type: String,
-
             default: '默认图标',
         },
     },
