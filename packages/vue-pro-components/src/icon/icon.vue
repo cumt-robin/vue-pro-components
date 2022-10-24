@@ -2,7 +2,7 @@
     <i>{{ icon }} </i>
 </template>
 
-<script>
+<script lang="ts">
 export default {
     props: {
         icon: {

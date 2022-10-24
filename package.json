@@ -24,11 +24,13 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-prettier": "^2.0.0",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.2",
+    "vue-eslint-parser": "^9.1.0"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap -- --hoist",
     "playground:dev": "lerna run --scope playground dev",
-    "publish:package": "lerna publish from-package --yes"
+    "publish:package": "lerna publish from-package --yes",
+    "lint": "eslint ./"
   }
 }

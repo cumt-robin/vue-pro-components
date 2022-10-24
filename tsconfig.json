@@ -7,6 +7,7 @@
         "importHelpers": true,
         "moduleResolution": "node",
         "baseUrl": "./",
+        "rootDir": ".",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -14,8 +15,7 @@
         "resolveJsonModule": true,
         "allowJs": true,
         "strictNullChecks": true,
-        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-        "paths": {}
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
     },
     "include": ["**/*.ts", "**/*.tsx", "**/*.vue", "**/tests/**/*.ts", "**/tests/**/*.tsx", "**/components.d.ts"],
     "exclude": ["node_modules"]
