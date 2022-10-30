@@ -49,6 +49,7 @@ module.exports = {
     rules: {
         indent: ['warn', 4],
         'no-console': ['warn', { allow: ['warn', 'error'] }],
+        'func-names': "off",
         'import/prefer-default-export': ['off'],
         'import/extensions': ['warn', 'never'],
         'vue/multi-word-component-names': ['off'],

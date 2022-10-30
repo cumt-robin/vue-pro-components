@@ -8,11 +8,7 @@
   "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
   "license": "MIT",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "main": "index.ts",
   "files": [
     "lib"
   ],

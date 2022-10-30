@@ -1,3 +1,6 @@
-import Icon from './icon.vue'
+import { withInstall } from '@vue-pro-components/utils'
+import Comp from './icon.vue'
 
-export default Icon
+Comp.name = 'VpIcon'
+
+export const Icon = withInstall(Comp)

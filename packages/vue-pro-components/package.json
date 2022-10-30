@@ -3,19 +3,18 @@
   "version": "0.0.2",
   "description": "pro components based on vue3",
   "keywords": [
+    "pro",
     "components",
     "vue3",
     "vite",
     "typescript",
     "unplugin",
-    "on",
-    "demand",
-    "pro"
+    "ondemand"
   ],
   "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -38,5 +37,8 @@
   },
   "peerDependencies": {
     "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@vue-pro-components/utils": "^0.0.0"
   }
 }

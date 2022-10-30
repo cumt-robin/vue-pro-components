@@ -1,20 +1,9 @@
 <template>
-    <i>{{ icon }} </i>
+    <i class="iconfont" :style="{ fontSize: `${size}px`, color: color }" :class="`${iconPrefix}${icon}`"></i>
 </template>
 
-<script lang="ts">
-export default {
-    props: {
-        icon: {
-            type: String,
-            default: '默认图标',
-        },
-    },
-}
-</script>
+<script lang="ts" setup>
+import { props } from './props'
 
-<style lang="scss">
-.a {
-    color: red;
-}
-</style>
+defineProps(props)
+</script>
