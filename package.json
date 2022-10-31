@@ -34,5 +34,10 @@
     "playground:dev": "lerna run --scope playground dev",
     "publish:package": "lerna publish from-package --yes",
     "lint": "eslint ./"
+  },
+  "engines": {
+    "npm": "We recommend installing dependencies with yarn",
+    "yarn": ">=1.22.0 < 2.0.0",
+    "node": ">=14.0.0"
   }
 }
