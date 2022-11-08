@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { IconFont } from 'vue-pro-components'
+import { IconFont, IconSvg } from 'vue-pro-components'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -18,6 +18,9 @@ import HelloWorld from './components/HelloWorld.vue'
     <IconFont icon="lock" :size="20"></IconFont>
     <br />
     <IconFont icon="map" color="#3ebbff"></IconFont>
+    <br />
+    <IconSvg icon="lock"></IconSvg>
+    <IconSvg icon="map" color="blue" :size="32"></IconSvg>
     <HelloWorld msg="Vite + Vue" />
 </template>
 

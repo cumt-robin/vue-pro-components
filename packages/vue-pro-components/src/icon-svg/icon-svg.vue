@@ -1,5 +1,9 @@
 <template>
-    <i class="iconfont" :style="{ fontSize: `${size}px`, color: color }" :class="`${iconPrefix}${icon}`"></i>
+    <span :style="{ fontSize: `${size}px`, color: color }" :aria-label="icon" role="img">
+        <svg width="1em" height="1em" fill="currentColor" aria-hidden="true">
+            <use :xlink:href="`#${iconPrefix}${icon}`"></use>
+        </svg>
+    </span>
 </template>
 
 <script lang="ts" setup>
