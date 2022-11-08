@@ -1,1 +1,1 @@
-export { Icon } from './icon'
+export { IconFont } from './icon-font'
