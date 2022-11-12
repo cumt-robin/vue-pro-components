@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { IconFont, IconSvg } from 'vue-pro-components'
+import 'vue-pro-components/src/icon-svg/style/index.less'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -19,7 +20,10 @@ import HelloWorld from './components/HelloWorld.vue'
     <br />
     <IconFont icon="map" color="#3ebbff"></IconFont>
     <br />
-    <IconSvg icon="lock"></IconSvg>
+    <div style="display: flex; align-items: center">
+        <span>测试文本</span>
+        <IconSvg icon="lock"></IconSvg>
+    </div>
     <IconSvg icon="map" color="blue" :size="32"></IconSvg>
     <HelloWorld msg="Vite + Vue" />
 </template>

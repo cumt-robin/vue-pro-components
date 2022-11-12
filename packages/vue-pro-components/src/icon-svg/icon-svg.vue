@@ -1,5 +1,5 @@
 <template>
-    <span :style="{ fontSize: `${size}px`, color: color }" :aria-label="icon" role="img">
+    <span class="vp-icon-svg" :style="{ fontSize: `${size}px`, color: color }" :aria-label="icon" role="img">
         <svg width="1em" height="1em" fill="currentColor" aria-hidden="true">
             <use :xlink:href="`#${iconPrefix}${icon}`"></use>
         </svg>
