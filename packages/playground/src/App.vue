@@ -1,16 +1,19 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { IconFont, IconSvg, Button as VpButton } from 'vue-pro-components'
+import { IconFont, IconSvg, Button as VpButton, SelectIcon } from 'vue-pro-components'
 import 'vue-pro-components/src/icon-svg/style/index.less'
 import 'vue-pro-components/src/button/style/index.less'
-import { PlusOutlined } from '@ant-design/icons-vue'
-import { Button as AButton } from 'ant-design-vue'
-import { getCurrentInstance } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import 'vue-pro-components/src/select-icon/style/index.less'
+import { ref } from 'vue'
+import icons from './assets/json/icons.json'
 
-const ins = getCurrentInstance()
-ins?.appContext.app.component(PlusOutlined.displayName, PlusOutlined)
+const isSelectIconVisible = ref(false)
+const selectedIcon = ref('')
+const onSelectIcon = (value: string) => {
+    selectedIcon.value = value
+    isSelectIconVisible.value = false
+}
 </script>
 
 <template>
@@ -77,20 +80,27 @@ ins?.appContext.app.component(PlusOutlined.displayName, PlusOutlined)
             </VpButton>
         </li>
         <li>
-            <span>VpButton 通过 icoSource 和 ico 属性使用 @ant-design/icons-vue 的图标</span>
-            <VpButton ico-source="antd" ico="PlusOutlined">新建</VpButton>
-        </li>
-        <li>
             <span>AButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标</span>
-            <AButton>
+            <a-button>
                 <template #icon>
                     <PlusOutlined />
                 </template>
                 新建AButton
-            </AButton>
+            </a-button>
+        </li>
+        <li>
+            <span style="vertical-align: middle">菜单图标</span>
+            <a-input-search
+                style="width: 200px; vertical-align: middle"
+                v-model:value="selectedIcon"
+                @search="isSelectIconVisible = true"
+            ></a-input-search>
         </li>
     </ul>
-    <HelloWorld msg="Vite + Vue" />
+
+    <a-modal :visible="isSelectIconVisible" :footer="null" @cancel="isSelectIconVisible = false">
+        <select-icon :icons="icons" :value="selectedIcon" @select="onSelectIcon" />
+    </a-modal>
 </template>
 
 <style lang="less" scoped>

@@ -28,6 +28,13 @@ module.exports = {
                 // use an array of glob patterns
                 project: ['tsconfig.json', 'packages/*/tsconfig.json'],
             },
+            // alias: {
+            //     map: [
+            //         ["@", "./src"],
+            //         ["/static", "./public/static"],
+            //     ],
+            //     extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".vue"],
+            // },
         },
     },
     parser: 'vue-eslint-parser',
@@ -53,7 +60,7 @@ module.exports = {
         "no-underscore-dangle": "off",
         "no-nested-ternary": "off",
         'import/prefer-default-export': ['off'],
-        'import/extensions': ['warn', 'never'],
+        'import/extensions': ['off'],
         'import/no-named-as-default': 'off',
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
         'vue/multi-word-component-names': ['off'],

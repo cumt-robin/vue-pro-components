@@ -11,6 +11,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.0.0",
@@ -32,8 +33,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap -- --hoist",
     "playground:dev": "lerna run --scope playground dev",
-    "publish:package": "lerna publish from-package --yes",
-    "lint": "eslint ./"
+    "playground:genIconsList": "lerna run --scope playground genIconsList",
+    "publish:package": "lerna publish from-package --yes"
   },
   "engines": {
     "npm": "We recommend installing dependencies with yarn",
