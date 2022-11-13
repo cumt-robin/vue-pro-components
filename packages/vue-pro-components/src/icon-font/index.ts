@@ -4,3 +4,5 @@ import Comp from './icon-font.vue'
 Comp.name = 'VpIconFont'
 
 export const IconFont = withInstall(Comp)
+
+export default IconFont

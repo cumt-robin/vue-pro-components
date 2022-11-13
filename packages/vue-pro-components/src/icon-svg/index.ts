@@ -4,3 +4,5 @@ import Comp from './icon-svg.vue'
 Comp.name = 'VpIconSvg'
 
 export const IconSvg = withInstall(Comp)
+
+export default IconSvg

@@ -15,12 +15,12 @@
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
   "license": "MIT",
   "main": "index.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "types": "index.ts",
   "files": [
-    "lib"
+    "dist",
+    "lib",
+    "es",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
@@ -39,6 +39,12 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@vue-pro-components/utils": "^0.0.0"
+    "@vue-pro-components/utils": "^0.0.0",
+    "ant-design-vue": "^3.2.15",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@vue-pro-components/types": "^0.0.1"
   }
 }
