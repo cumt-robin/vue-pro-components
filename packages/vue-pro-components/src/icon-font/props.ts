@@ -21,4 +21,4 @@ export const props = {
     },
 }
 
-export type VpIconFontProps = ExtractPropTypes<typeof props>
+export type VpIconFontProps = Partial<ExtractPropTypes<typeof props>>

@@ -51,6 +51,7 @@ module.exports = {
         'no-console': ['warn', { allow: ['warn', 'error'] }],
         'func-names': "off",
         "no-underscore-dangle": "off",
+        "no-nested-ternary": "off",
         'import/prefer-default-export': ['off'],
         'import/extensions': ['warn', 'never'],
         'import/no-named-as-default': 'off',

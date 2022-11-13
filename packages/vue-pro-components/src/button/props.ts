@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 // 这是一个函数
 import buttonProps from 'ant-design-vue/es/button/buttonTypes'
 import { initDefaultProps } from 'ant-design-vue/es/_util/props-util'
@@ -20,6 +20,12 @@ export const enhancedProps = {
     icoColor: {
         type: String,
     },
+    // 图标源，biz 代表业务图标，antd 代表 @ant-design/icons-vue 的图标，默认是 biz
+    icoSource: {
+        type: String as PropType<'biz' | 'antd'>,
+        default: 'biz',
+        validator: (value: string) => ['biz', 'antd'].includes(value),
+    },
     // 按钮主体颜色，影响边框颜色，背景色
     primaryColor: {
         type: String,
@@ -34,4 +40,4 @@ export const props = {
     ...enhancedProps,
 }
 
-export type VpButtonProps = ExtractPropTypes<typeof props>
+export type VpButtonProps = Partial<ExtractPropTypes<typeof props>>

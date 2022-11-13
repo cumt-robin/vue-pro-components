@@ -6,7 +6,11 @@ import 'vue-pro-components/src/icon-svg/style/index.less'
 import 'vue-pro-components/src/button/style/index.less'
 import { PlusOutlined } from '@ant-design/icons-vue'
 import { Button as AButton } from 'ant-design-vue'
+import { getCurrentInstance } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+
+const ins = getCurrentInstance()
+ins?.appContext.app.component(PlusOutlined.displayName, PlusOutlined)
 </script>
 
 <template>
@@ -42,21 +46,12 @@ import HelloWorld from './components/HelloWorld.vue'
             <VpButton ico="smile" size="small" loading>笑脸</VpButton>
         </li>
         <li>
-            <span>VpButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标</span>
-            <VpButton type="primary">
-                <template #icon>
-                    <PlusOutlined />
-                </template>
-                新建
-            </VpButton>
-        </li>
-        <li>
             <span>VpButton 通过 ico 属性使用 icon-svg 的图标，按钮 size 为 small，属性 disabled 为 true</span>
             <VpButton ico="smile" size="small" disabled>笑脸</VpButton>
         </li>
         <li>
-            <span>VpButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标，按钮 size 为 small，属性 loading 为 true</span>
-            <VpButton type="primary" size="small" loading>
+            <span>VpButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标</span>
+            <VpButton type="primary">
                 <template #icon>
                     <PlusOutlined />
                 </template>
@@ -71,6 +66,19 @@ import HelloWorld from './components/HelloWorld.vue'
                 </template>
                 新建
             </VpButton>
+        </li>
+        <li>
+            <span>VpButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标，按钮 size 为 small，属性 loading 为 true</span>
+            <VpButton type="primary" size="small" loading>
+                <template #icon>
+                    <PlusOutlined />
+                </template>
+                新建
+            </VpButton>
+        </li>
+        <li>
+            <span>VpButton 通过 icoSource 和 ico 属性使用 @ant-design/icons-vue 的图标</span>
+            <VpButton ico-source="antd" ico="PlusOutlined">新建</VpButton>
         </li>
         <li>
             <span>AButton 通过 icon 插槽使用 @ant-design/icons-vue 的图标</span>

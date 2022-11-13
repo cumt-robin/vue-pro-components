@@ -21,4 +21,4 @@ export const props = {
     },
 }
 
-export type VpIconSvgProps = ExtractPropTypes<typeof props>
+export type VpIconSvgProps = Partial<ExtractPropTypes<typeof props>>
