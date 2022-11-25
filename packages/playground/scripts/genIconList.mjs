@@ -10,7 +10,6 @@ export async function genIconListJson() {
         const res = await axios.get(SVG_ICON_SCRIPT_URL);
         
         if (res.status === 200) {
-            console.log()
             const iconList = res.data.glyphs.map(item => item.name)
             console.log(iconList);
             fs.writeFile(new URL("../src/assets/json/icons.json", import.meta.url), JSON.stringify(iconList, null, 2), function (err) {
