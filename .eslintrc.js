@@ -65,6 +65,7 @@ module.exports = {
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
         'vue/multi-word-component-names': ['off'],
         'prettier/prettier': 'error',
+        "@typescript-eslint/no-floating-promises": "off"
     },
     overrides: [],
 }
