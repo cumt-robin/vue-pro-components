@@ -59,6 +59,7 @@ module.exports = {
         'func-names': "off",
         "no-underscore-dangle": "off",
         "no-nested-ternary": "off",
+        "default-param-last": "off",
         'import/prefer-default-export': ['off'],
         'import/extensions': ['off'],
         'import/no-named-as-default': 'off',

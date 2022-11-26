@@ -25,16 +25,16 @@ interface EnhancedDocument extends Document {
  * https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullScreen
  * @param element 全屏目标元素，默认是 body
  */
-export function enterFullscreen(element: EnhancedHTMLElement = document.body) {
+export async function enterFullscreen(element: EnhancedHTMLElement = document.body, options?: FullscreenOptions) {
     try {
         if (element.requestFullscreen) {
-            element.requestFullscreen()
+            await element.requestFullscreen(options)
         } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen()
+            await element.webkitRequestFullScreen()
         } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen()
+            await element.mozRequestFullScreen()
         } else if (element.msRequestFullscreen) {
-            element.msRequestFullscreen()
+            await element.msRequestFullscreen()
         } else {
             throw new Error('该浏览器不支持全屏API')
         }
@@ -44,21 +44,22 @@ export function enterFullscreen(element: EnhancedHTMLElement = document.body) {
 }
 
 /**
- * @description 退出全屏
+ * 退出全屏
+ * https://developer.mozilla.org/en-US/docs/Web/API/Document/exitFullscreen
  */
-export function exitFullscreen(): void {
+export async function exitFullscreen() {
     const doc: EnhancedDocument = document
     try {
         if (doc.exitFullscreen) {
-            doc.exitFullscreen()
+            await doc.exitFullscreen()
         } else if (doc.webkitExitFullscreen) {
-            doc.webkitExitFullscreen()
+            await doc.webkitExitFullscreen()
         } else if (doc.webkitCancelFullScreen) {
-            doc.webkitCancelFullScreen()
+            await doc.webkitCancelFullScreen()
         } else if (doc.mozCancelFullScreen) {
-            doc.mozCancelFullScreen()
+            await doc.mozCancelFullScreen()
         } else if (doc.msExitFullscreen) {
-            doc.msExitFullscreen()
+            await doc.msExitFullscreen()
         } else {
             throw new Error('该浏览器不支持全屏API')
         }
@@ -71,26 +72,20 @@ export function exitFullscreen(): void {
  * @description 判断浏览器当前状态是否允许进入全屏
  */
 export function isFullscreenEnabled(): boolean {
-    const doc: EnhancedDocument = document
-    return Boolean(doc.fullscreenEnabled || doc.webkitFullScreenEnabled || doc.mozFullScreenEnabled || doc.msFullScreenEnabled)
+    return !!(
+        (document as EnhancedDocument).fullscreenEnabled ||
+        (document as EnhancedDocument).webkitFullScreenEnabled ||
+        (document as EnhancedDocument).mozFullScreenEnabled ||
+        (document as EnhancedDocument).msFullScreenEnabled
+    )
 }
 
 /**
  * @description 获取全屏元素
  */
 export function getFullscreenElement(): Element | null {
-    let element: Element | null = null
     const doc: EnhancedDocument = document
-    if (doc.fullscreenElement) {
-        element = doc.fullscreenElement
-    } else if (doc.webkitFullscreenElement) {
-        element = doc.webkitFullscreenElement
-    } else if (doc.mozFullScreenElement) {
-        element = doc.mozFullScreenElement
-    } else if (doc.msFullscreenElement) {
-        element = doc.msFullscreenElement
-    }
-    return element
+    return doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement || null
 }
 
 /**
