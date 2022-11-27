@@ -10,5 +10,15 @@ module.exports = {
         'prettier/prettier': true,
         indentation: 4,
         'max-empty-lines': 1,
+        // "at-rule-no-unknown": null,
+        // "scss/at-rule-no-unknown": [true, {
+        //     ignoreAtRules: ["/^ui-/i"]
+        // }]
     },
+    "overrides": [
+        {
+          "files": ["**/*.less"],
+          "customSyntax": "postcss-syntax"
+        },
+    ]
 }

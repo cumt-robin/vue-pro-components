@@ -20,6 +20,8 @@
     "eslint-plugin-vue": "^9.6.0",
     "lerna": "^5.3.0",
     "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.3",
