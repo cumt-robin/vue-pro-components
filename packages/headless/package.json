@@ -1,9 +1,11 @@
 {
-  "name": "@vue-pro-components/utils",
+  "name": "@vue-pro-components/headless",
   "version": "0.0.0",
-  "description": "utils",
+  "description": "headless ui for vue-pro-components",
   "keywords": [
-    "utils"
+    "headless",
+    "ui",
+    "vue"
   ],
   "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
@@ -13,7 +15,8 @@
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmmirror.com"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,11 @@
   },
   "bugs": {
     "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.45"
+  },
+  "dependencies": {
+    "@vue-pro-components/utils": "^0.0.0"
   }
 }

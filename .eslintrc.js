@@ -43,7 +43,7 @@ module.exports = {
                 alwaysTryTypes: true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
                 // Multiple tsconfigs (Useful for monorepos)
                 // use an array of glob patterns
-                project: ['tsconfig.json', 'packages/*/tsconfig.json'],
+                project: ['tsconfig.json'],
             },
             // alias: {
             //     map: [
