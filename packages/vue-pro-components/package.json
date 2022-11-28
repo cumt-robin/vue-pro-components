@@ -39,6 +39,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
     "@vue-pro-components/utils": "^0.0.0",
     "ant-design-vue": "^3.2.15",
     "lodash-es": "^4.17.21"

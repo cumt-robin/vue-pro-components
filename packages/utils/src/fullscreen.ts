@@ -21,27 +21,30 @@ interface EnhancedDocument extends Document {
 }
 
 /**
- * 进入全屏
- * https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullScreen
- * @param {EnhancedHTMLElement} [element=document.body] - 全屏目标元素，默认是 body
- * @param {FullscreenOptions} options - 全屏选项
+ * @description 判断浏览器当前状态是否允许进入全屏
  */
-export async function enterFullscreen(element: EnhancedHTMLElement = document.body, options?: FullscreenOptions) {
-    try {
-        if (element.requestFullscreen) {
-            await element.requestFullscreen(options)
-        } else if (element.webkitRequestFullScreen) {
-            await element.webkitRequestFullScreen()
-        } else if (element.mozRequestFullScreen) {
-            await element.mozRequestFullScreen()
-        } else if (element.msRequestFullscreen) {
-            await element.msRequestFullscreen()
-        } else {
-            throw new Error('该浏览器不支持全屏API')
-        }
-    } catch (err) {
-        console.error(err)
-    }
+export function isFullscreenEnabled(): boolean {
+    return !!(
+        (document as EnhancedDocument).fullscreenEnabled ||
+        (document as EnhancedDocument).webkitFullScreenEnabled ||
+        (document as EnhancedDocument).mozFullScreenEnabled ||
+        (document as EnhancedDocument).msFullScreenEnabled
+    )
+}
+
+/**
+ * @description 获取全屏元素
+ */
+export function getFullscreenElement(): Element | null {
+    const doc: EnhancedDocument = document
+    return doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement || null
+}
+
+/**
+ * @description 判断当前是否是全屏状态
+ */
+export function isFullscreen(): boolean {
+    return !!getFullscreenElement() || window.innerHeight === window.screen.height
 }
 
 /**
@@ -70,30 +73,28 @@ export async function exitFullscreen() {
 }
 
 /**
- * @description 判断浏览器当前状态是否允许进入全屏
+ * 进入全屏
+ * https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullScreen
+ * 存在 top-layer 叠加问题，如果要规避叠加顺序带来的问题，需要手动判断全屏状态，如果当前已经是全屏状态，可以先退出全屏，再让目标元素进入全屏
+ * @param {EnhancedHTMLElement} [element=document.body] - 全屏目标元素，默认是 body
+ * @param {FullscreenOptions} options - 全屏选项
  */
-export function isFullscreenEnabled(): boolean {
-    return !!(
-        (document as EnhancedDocument).fullscreenEnabled ||
-        (document as EnhancedDocument).webkitFullScreenEnabled ||
-        (document as EnhancedDocument).mozFullScreenEnabled ||
-        (document as EnhancedDocument).msFullScreenEnabled
-    )
-}
-
-/**
- * @description 获取全屏元素
- */
-export function getFullscreenElement(): Element | null {
-    const doc: EnhancedDocument = document
-    return doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement || null
-}
-
-/**
- * @description 判断当前是否是全屏状态
- */
-export function isFullscreen(): boolean {
-    return !!getFullscreenElement() || window.innerHeight === window.screen.height
+export async function enterFullscreen(element: EnhancedHTMLElement = document.body, options?: FullscreenOptions) {
+    try {
+        if (element.requestFullscreen) {
+            await element.requestFullscreen(options)
+        } else if (element.webkitRequestFullScreen) {
+            await element.webkitRequestFullScreen()
+        } else if (element.mozRequestFullScreen) {
+            await element.mozRequestFullScreen()
+        } else if (element.msRequestFullscreen) {
+            await element.msRequestFullscreen()
+        } else {
+            throw new Error('该浏览器不支持全屏API')
+        }
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 /**
