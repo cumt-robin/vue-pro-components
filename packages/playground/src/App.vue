@@ -8,7 +8,10 @@ import 'vue-pro-components/src/select-icon/style/index.less'
 import 'vue-pro-components/src/fullscreen/style/index.less'
 import { ref } from 'vue'
 import { useFullscreen } from '@vue-pro-components/headless'
+import { patchF11DefaultAction } from '@vue-pro-components/utils'
 import icons from './assets/json/icons.json'
+
+patchF11DefaultAction()
 
 const isSelectIconVisible = ref(false)
 const selectedIcon = ref('')
