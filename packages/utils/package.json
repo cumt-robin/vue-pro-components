@@ -8,9 +8,16 @@
   "author": "Tusi <cumtrobin@163.com>",
   "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
   "license": "MIT",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
   "files": [
-    "lib"
+    "dist",
+    "lib",
+    "es",
+    "types"
   ],
   "publishConfig": {
     "access": "public"
