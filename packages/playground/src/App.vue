@@ -7,6 +7,7 @@ import 'vue-pro-components/src/button/style/index.less'
 import 'vue-pro-components/src/select-icon/style/index.less'
 import 'vue-pro-components/src/fullscreen/style/index.less'
 import { ref } from 'vue'
+import { useFullscreen } from '@vue-pro-components/headless'
 import icons from './assets/json/icons.json'
 
 const isSelectIconVisible = ref(false)
@@ -19,6 +20,8 @@ const onSelectIcon = (value: string) => {
 const wrapperRef = ref<HTMLElement | null>(null)
 
 const getWrapperElement = () => wrapperRef.value
+
+const { isTargetFullscreen, toggleFullscreen } = useFullscreen()
 </script>
 
 <template>
@@ -110,6 +113,14 @@ const getWrapperElement = () => wrapperRef.value
             <VpButton style="margin-left: 20px">
                 <Fullscreen :getElement="getWrapperElement"></Fullscreen>
             </VpButton>
+
+            <a-switch
+                :checked="isTargetFullscreen"
+                checkedChildren="退出全屏"
+                unCheckedChildren="进入全屏"
+                @change="() => toggleFullscreen()"
+                style="margin-left: 20px"
+            ></a-switch>
         </div>
 
         <a-modal :visible="isSelectIconVisible" :footer="null" :get-container="getWrapperElement" @cancel="isSelectIconVisible = false">

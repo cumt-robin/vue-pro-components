@@ -7,7 +7,6 @@
         "importHelpers": true,
         "moduleResolution": "node",
         "baseUrl": "./",
-        "rootDir": ".",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -15,7 +14,12 @@
         "resolveJsonModule": true,
         "allowJs": true,
         "strictNullChecks": true,
-        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+        "paths": {
+            "@vue-pro-components/types/*": ["packages/types/src/*"],
+            "@vue-pro-components/utils/*": ["packages/utils/src/*"],
+            "@vue-pro-components/headless/*": ["packages/headless/src/*"],
+        }
     },
     "include": ["**/*.ts", "**/*.tsx", "**/*.vue", "**/tests/**/*.ts", "**/tests/**/*.tsx", "**/components.d.ts"],
     "exclude": ["node_modules"]

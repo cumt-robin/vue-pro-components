@@ -1,18 +1,25 @@
-import { EnhancedHTMLElement, enterFullscreen, exitFullscreen, getFullscreenElement, isFullscreen, listenFullscreen } from "@vue-pro-components/utils"
-import { onMounted, ref } from "vue"
+import {
+    EnhancedHTMLElement,
+    enterFullscreen,
+    exitFullscreen,
+    getFullscreenElement,
+    isFullscreen,
+    listenFullscreen,
+} from '@vue-pro-components/utils'
+import { onMounted, ref } from 'vue'
 
 export interface UseFullscreenOptions {
-    getElement: () => EnhancedHTMLElement
-    onFullscreenChange: (state: boolean) => void
+    getElement?: () => EnhancedHTMLElement
+    onFullscreenChange?: (state: boolean) => void
 }
 
-export const useFullscreen = ({ getElement, onFullscreenChange }: UseFullscreenOptions) => {
+export const useFullscreen = ({ getElement = () => document.body, onFullscreenChange }: UseFullscreenOptions = {}) => {
     const isTargetFullscreen = ref(false)
     const checkFullscreenStatus = () => {
         const isFullscreenFlag = isFullscreen()
         isTargetFullscreen.value = isFullscreenFlag ? (getFullscreenElement() || document.body) === getElement() : false
     }
-    const onRequestFullscreen = () => {
+    const toggleFullscreen = () => {
         checkFullscreenStatus()
         if (isTargetFullscreen.value === true) {
             exitFullscreen()
@@ -24,7 +31,12 @@ export const useFullscreen = ({ getElement, onFullscreenChange }: UseFullscreenO
         checkFullscreenStatus()
         listenFullscreen(() => {
             checkFullscreenStatus()
-            onFullscreenChange(isTargetFullscreen.value)
+            onFullscreenChange?.(isTargetFullscreen.value)
         })
     })
+
+    return {
+        isTargetFullscreen,
+        toggleFullscreen,
+    }
 }
