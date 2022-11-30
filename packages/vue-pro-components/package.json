@@ -1,52 +1,52 @@
 {
-  "name": "vue-pro-components",
-  "version": "0.0.2",
-  "description": "pro components based on vue3",
-  "keywords": [
-    "pro",
-    "components",
-    "vue3",
-    "vite",
-    "typescript",
-    "unplugin",
-    "ondemand"
-  ],
-  "author": "Tusi <cumtrobin@163.com>",
-  "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
-  "license": "MIT",
-  "main": "index.ts",
-  "types": "index.ts",
-  "files": [
-    "dist",
-    "lib",
-    "es",
-    "src"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
-  "dependencies": {
-    "@ant-design/icons-vue": "^6.1.0",
-    "@vue-pro-components/headless": "^0.0.0",
-    "@vue-pro-components/utils": "^0.0.0",
-    "ant-design-vue": "^3.2.15",
-    "lodash-es": "^4.17.21"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4.17.6",
-    "@vue-pro-components/types": "^0.0.1"
-  }
+    "name": "vue-pro-components",
+    "version": "0.1.0",
+    "description": "pro components based on vue3",
+    "keywords": [
+        "pro",
+        "components",
+        "vue3",
+        "vite",
+        "typescript",
+        "unplugin",
+        "ondemand"
+    ],
+    "author": "Tusi <cumtrobin@163.com>",
+    "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
+    "license": "MIT",
+    "main": "index.ts",
+    "types": "index.ts",
+    "files": [
+        "dist",
+        "lib",
+        "es",
+        "src"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: run tests from root\" && exit 1"
+    },
+    "bugs": {
+        "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.0"
+    },
+    "dependencies": {
+        "@ant-design/icons-vue": "^6.1.0",
+        "@vue-pro-components/headless": "^0.1.0",
+        "@vue-pro-components/utils": "^0.1.0",
+        "ant-design-vue": "^3.2.15",
+        "lodash-es": "^4.17.21"
+    },
+    "devDependencies": {
+        "@types/lodash-es": "^4.17.6",
+        "@vue-pro-components/types": "^0.1.0"
+    }
 }

@@ -1,22 +1,22 @@
 {
-  "name": "@vue-pro-components/types",
-  "version": "0.0.1",
-  "description": "types for vue pro components",
-  "keywords": [
-    "types"
-  ],
-  "author": "Tusi <cumtrobin@163.com>",
-  "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
-  "license": "MIT",
-  "main": "index.ts",
-  "publishConfig": {
-    "registry": "https://registry.npmmirror.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-  }
+    "name": "@vue-pro-components/types",
+    "version": "0.1.0",
+    "description": "types for vue pro components",
+    "keywords": [
+        "types"
+    ],
+    "author": "Tusi <cumtrobin@163.com>",
+    "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
+    "license": "MIT",
+    "main": "index.ts",
+    "publishConfig": {
+        "registry": "https://registry.npmmirror.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+    }
 }

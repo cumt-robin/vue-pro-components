@@ -1,32 +1,32 @@
 {
-  "name": "@vue-pro-components/utils",
-  "version": "0.0.0",
-  "description": "utils",
-  "keywords": [
-    "utils"
-  ],
-  "author": "Tusi <cumtrobin@163.com>",
-  "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
-  "license": "MIT",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "unpkg": "dist/index.js",
-  "jsdelivr": "dist/index.js",
-  "files": [
-    "dist",
-    "lib",
-    "es",
-    "types"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
-  },
-  "bugs": {
-    "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-  }
+    "name": "@vue-pro-components/utils",
+    "version": "0.1.0",
+    "description": "utils",
+    "keywords": [
+        "utils"
+    ],
+    "author": "Tusi <cumtrobin@163.com>",
+    "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
+    "license": "MIT",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "unpkg": "dist/index.js",
+    "jsdelivr": "dist/index.js",
+    "files": [
+        "dist",
+        "lib",
+        "es",
+        "types"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cumt-robin/vue-pro-components.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cumt-robin/vue-pro-components/issues"
+    }
 }
