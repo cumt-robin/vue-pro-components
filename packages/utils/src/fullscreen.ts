@@ -1,3 +1,5 @@
+import { isUndefined } from './type'
+
 export interface EnhancedHTMLElement extends HTMLElement {
     webkitRequestFullScreen?: () => Promise<void>
     mozRequestFullScreen?: () => Promise<void>
@@ -104,7 +106,7 @@ export async function enterFullscreen(element: EnhancedHTMLElement = document.bo
  */
 export function listenFullscreen(callback: EventListener, options?: boolean | AddEventListenerOptions): void {
     const doc: EnhancedDocument = document
-    if (typeof doc.exitFullscreen !== 'undefined') {
+    if (!isUndefined(doc.exitFullscreen)) {
         doc.addEventListener('fullscreenchange', callback, options)
     } else if (doc.webkitExitFullscreen) {
         doc.addEventListener('webkitfullscreenchange', callback, options)
@@ -124,7 +126,7 @@ export function listenFullscreen(callback: EventListener, options?: boolean | Ad
  */
 export function unlistenFullscreen(callback: EventListener, options?: boolean | EventListenerOptions): void {
     const doc: EnhancedDocument = document
-    if (typeof doc.exitFullscreen !== 'undefined') {
+    if (!isUndefined(doc.exitFullscreen)) {
         doc.removeEventListener('fullscreenchange', callback, options)
     } else if (doc.webkitExitFullscreen) {
         doc.removeEventListener('webkitfullscreenchange', callback, options)
