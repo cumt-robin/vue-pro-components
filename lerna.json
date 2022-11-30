@@ -10,6 +10,10 @@
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"
+    },
+    "version": {
+      "message": "chore(release): publish %s",
+      "conventionalCommits": true
     }
   }
 }
