@@ -1,2 +1,6 @@
 node_modules
 **/*.log
+packages/*/dist
+packages/*/es
+packages/*/lib
+packages/*/types
