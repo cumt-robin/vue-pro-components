@@ -1,6 +1,6 @@
 {
     "name": "@vue-pro-components/utils",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "utils",
     "keywords": [
         "utils"
@@ -28,5 +28,6 @@
     },
     "bugs": {
         "url": "https://github.com/cumt-robin/vue-pro-components/issues"
-    }
+    },
+    "gitHead": "d10e185435f5a4795faecf8b888dfab28ed057c2"
 }
