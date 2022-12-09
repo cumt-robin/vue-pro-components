@@ -1,6 +1,7 @@
 import { rollup } from 'rollup'
 import rollupTypescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
+import terser from '@rollup/plugin-terser';
 import { resolve } from 'path'
 import fastGlob from 'fast-glob'
 import { parallel } from 'gulp'
@@ -43,12 +44,20 @@ export const buildBundle = async () => {
         plugins: [rollupTypescript()],
     })
 
-    await bundle.write({
-        name: 'VpUtils',
-        format: 'umd',
-        dir: resolve(UTILS_PATH, 'dist'),
-        sourcemap: true,
-    })
+    await Promise.all([
+        bundle.write({
+            name: 'VpUtils',
+            format: 'umd',
+            file: resolve(UTILS_PATH, 'dist/index.js'),
+            sourcemap: true,
+        }),
+        bundle.write({
+            name: 'VpUtils',
+            format: 'iife',
+            file: resolve(UTILS_PATH, 'dist/index.min.js'),
+            plugins: [terser()]
+        })
+    ])
 }
 
 export const buildTypes = async () => {
