@@ -9,7 +9,6 @@ import 'vue-pro-components/src/fullscreen/style/index.less'
 import { ref } from 'vue'
 import { useFullscreen } from '@vue-pro-components/headless'
 import { patchF11DefaultAction } from '@vue-pro-components/utils'
-// import { patchF11DefaultAction as patchF11DefaultAction$1 } from '@vue-pro-components/utils/es/fullscreen'
 import icons from './assets/json/icons.json'
 
 patchF11DefaultAction()

@@ -4,7 +4,7 @@ import dts from 'rollup-plugin-dts'
 import terser from '@rollup/plugin-terser';
 import { resolve } from 'path'
 import fastGlob from 'fast-glob'
-import { parallel } from 'gulp'
+import { dest, parallel, series, src } from 'gulp'
 import { UTILS_PATH } from './path'
 
 const getInputs = async (glob = 'src/**/*.ts') => {
@@ -73,4 +73,15 @@ export const buildTypes = async () => {
     })
 }
 
-export const startBuildUtils = parallel(buildModules, buildBundle, buildTypes)
+export const copyDts = async () => {
+    return src("types/**/*.d.ts", {
+        cwd: UTILS_PATH,
+    })
+        .pipe(dest(resolve(UTILS_PATH, "es")))
+        .pipe(dest(resolve(UTILS_PATH, "lib")))
+}
+
+export const startBuildUtils = series(
+    parallel(buildModules, buildBundle, buildTypes),
+    copyDts
+)
