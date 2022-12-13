@@ -6,6 +6,7 @@ import { resolve } from 'path'
 import fastGlob from 'fast-glob'
 import { dest, parallel, series, src } from 'gulp'
 import { UTILS_PATH } from './path'
+import pkgJson from "../packages/utils/package.json";
 
 const getInputs = async (glob = 'src/**/*.ts') => {
     return await fastGlob(glob, {
@@ -22,6 +23,7 @@ export const buildModules = async () => {
     const bundle = await rollup({
         input,
         plugins: [rollupTypescript()],
+        external: Object.keys(pkgJson.dependencies),
     })
 
     await Promise.all([
@@ -44,18 +46,25 @@ export const buildBundle = async () => {
         plugins: [rollupTypescript()],
     })
 
+    const globals = {
+        dayjs: "dayjs",
+    }
+
     await Promise.all([
         bundle.write({
             name: 'VpUtils',
             format: 'umd',
             file: resolve(UTILS_PATH, 'dist/index.js'),
             sourcemap: true,
+            globals
         }),
         bundle.write({
             name: 'VpUtils',
             format: 'iife',
             file: resolve(UTILS_PATH, 'dist/index.min.js'),
-            plugins: [terser()]
+            sourcemap: false,
+            plugins: [terser()],
+            globals,
         })
     ])
 }

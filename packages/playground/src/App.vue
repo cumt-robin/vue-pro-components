@@ -8,7 +8,7 @@ import 'vue-pro-components/src/select-icon/style/index.less'
 import 'vue-pro-components/src/fullscreen/style/index.less'
 import { ref } from 'vue'
 import { useFullscreen } from '@vue-pro-components/headless'
-import { patchF11DefaultAction } from '@vue-pro-components/utils'
+import { EnhancedHTMLElement, patchF11DefaultAction } from '@vue-pro-components/utils'
 import icons from './assets/json/icons.json'
 
 patchF11DefaultAction()
@@ -20,9 +20,9 @@ const onSelectIcon = (value: string) => {
     isSelectIconVisible.value = false
 }
 
-const wrapperRef = ref<HTMLElement | null>(null)
+const wrapperRef = ref<EnhancedHTMLElement>()
 
-const getWrapperElement = () => wrapperRef.value
+const getWrapperElement = () => wrapperRef.value || document.body
 
 const { isTargetFullscreen, toggleFullscreen } = useFullscreen()
 </script>
