@@ -29,7 +29,7 @@
     "bugs": {
         "url": "https://github.com/cumt-robin/vue-pro-components/issues"
     },
-    "gitHead": "d10e185435f5a4795faecf8b888dfab28ed057c2",
+    "gitHead": "a8917ef49b5877382ef5a369ead64b10c3b32d84",
     "dependencies": {
         "dayjs": "^1.11.7"
     },
