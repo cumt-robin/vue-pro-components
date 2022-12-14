@@ -10,7 +10,7 @@
     "license": "MIT",
     "main": "index.ts",
     "publishConfig": {
-        "registry": "https://registry.npmmirror.com"
+        "access": "public"
     },
     "repository": {
         "type": "git",
@@ -19,5 +19,5 @@
     "bugs": {
         "url": "https://github.com/cumt-robin/vue-pro-components/issues"
     },
-    "gitHead": "a8917ef49b5877382ef5a369ead64b10c3b32d84"
+    "gitHead": "332d90f75db2f7a2daff8f964e51abd59aa8e52b"
 }

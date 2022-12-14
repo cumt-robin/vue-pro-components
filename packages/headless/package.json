@@ -22,8 +22,7 @@
         "types"
     ],
     "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmmirror.com"
+        "access": "public"
     },
     "repository": {
         "type": "git",
@@ -38,5 +37,5 @@
     "dependencies": {
         "@vue-pro-components/utils": "^0.2.2"
     },
-    "gitHead": "a8917ef49b5877382ef5a369ead64b10c3b32d84"
+    "gitHead": "332d90f75db2f7a2daff8f964e51abd59aa8e52b"
 }
