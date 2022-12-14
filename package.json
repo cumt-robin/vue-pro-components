@@ -50,7 +50,9 @@
     "playground:dev": "lerna run --scope playground dev",
     "playground:genIconsList": "lerna run --scope playground genIconsList",
     "publish:package": "lerna publish from-package --yes",
-    "buildUtils": "gulp buildUtils"
+    "buildUtils": "gulp buildUtils",
+    "buildHeadless": "gulp buildHeadless",
+    "buildBatch": "gulp buildBatch"
   },
   "engines": {
     "npm": "We recommend installing dependencies with yarn",

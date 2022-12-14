@@ -1,7 +1,8 @@
 import { series, src } from "gulp";
 import clean from "gulp-clean";
+import { startBuildHeadless } from "./build/build-headless";
 import { startBuildUtils } from "./build/build-utils";
-import { UTILS_PATH } from "./build/path";
+import { UTILS_PATH, HEADLESS_PATH } from "./build/path";
 
 const ARTIFACTS_DIRS = ["dist", "es", "lib", "types"]
 
@@ -11,4 +12,14 @@ function cleanDir(dir = "dist", options = {}) {
 
 export const cleanUtils = cleanDir.bind(null, ARTIFACTS_DIRS, { cwd: UTILS_PATH })
 
+export const cleanHeadless = cleanDir.bind(null, ARTIFACTS_DIRS, { cwd: HEADLESS_PATH })
+
 export const buildUtils = series(cleanUtils, startBuildUtils);
+
+export const buildHeadless = series(cleanHeadless, startBuildHeadless);
+
+// 根据依赖关系确定顺序
+export const buildBatch = series(
+    buildUtils,
+    buildHeadless
+)

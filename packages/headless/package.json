@@ -1,6 +1,6 @@
 {
     "name": "@vue-pro-components/headless",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "headless ui for vue-pro-components",
     "keywords": [
         "headless",
@@ -10,9 +10,16 @@
     "author": "Tusi <cumtrobin@163.com>",
     "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
     "license": "MIT",
-    "main": "index.ts",
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "types": "types/index.d.ts",
+    "unpkg": "dist/index.js",
+    "jsdelivr": "dist/index.js",
     "files": [
-        "lib"
+        "dist",
+        "lib",
+        "es",
+        "types"
     ],
     "publishConfig": {
         "access": "public",
