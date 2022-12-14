@@ -2,6 +2,8 @@ import { rollup } from 'rollup'
 import rollupTypescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
 import terser from '@rollup/plugin-terser';
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from '@rollup/plugin-commonjs';
 import { resolve } from 'path'
 import fastGlob from 'fast-glob'
 import { dest, parallel, series, src } from 'gulp'
@@ -22,7 +24,7 @@ export const buildModules = async () => {
 
     const bundle = await rollup({
         input,
-        plugins: [rollupTypescript()],
+        plugins: [rollupTypescript(), nodeResolve(), commonjs()],
         external: Object.keys(pkgJson.dependencies),
     })
 
@@ -43,12 +45,14 @@ export const buildModules = async () => {
 export const buildBundle = async () => {
     const bundle = await rollup({
         input: resolve(UTILS_PATH, 'src/index.ts'),
-        plugins: [rollupTypescript()],
+        plugins: [rollupTypescript(), nodeResolve(), commonjs()],
+        // 如果你觉得第三方依赖体积很大，也可以用 external 拆出来，让调用方提供对应依赖，此时要配合 globals 一起用
+        // external: Object.keys(pkgJson.dependencies),
     })
 
-    const globals = {
-        dayjs: "dayjs",
-    }
+    // const globals = {
+    //     dayjs: "dayjs",
+    // }
 
     await Promise.all([
         bundle.write({
@@ -56,7 +60,7 @@ export const buildBundle = async () => {
             format: 'umd',
             file: resolve(UTILS_PATH, 'dist/index.js'),
             sourcemap: true,
-            globals
+            // globals
         }),
         bundle.write({
             name: 'VpUtils',
@@ -64,7 +68,7 @@ export const buildBundle = async () => {
             file: resolve(UTILS_PATH, 'dist/index.min.js'),
             sourcemap: false,
             plugins: [terser()],
-            globals,
+            // globals,
         })
     ])
 }
