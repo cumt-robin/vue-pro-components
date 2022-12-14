@@ -52,6 +52,7 @@
     "publish:package": "lerna publish from-package --yes",
     "buildUtils": "gulp buildUtils",
     "buildHeadless": "gulp buildHeadless",
+    "buildTypes": "gulp buildTypes",
     "buildBatch": "gulp buildBatch"
   },
   "engines": {

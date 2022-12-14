@@ -1,6 +1,6 @@
 {
     "name": "@vue-pro-components/types",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "types for vue pro components",
     "keywords": [
         "types"
@@ -8,7 +8,10 @@
     "author": "Tusi <cumtrobin@163.com>",
     "homepage": "https://github.com/cumt-robin/vue-pro-components#readme",
     "license": "MIT",
-    "main": "index.ts",
+    "types": "types/index.d.ts",
+    "files": [
+        "types"
+    ],
     "publishConfig": {
         "access": "public"
     },
