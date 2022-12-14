@@ -2,6 +2,8 @@
 
 ## 登录
 
-`npm adduser --registry https://registry.npmjs.org`
+```
+npm adduser --registry=https://registry.npmjs.org
+```
 
 ## 发布
