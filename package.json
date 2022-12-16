@@ -14,6 +14,7 @@
     "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.0.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -42,6 +43,7 @@
     "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-less": "^1.0.6",
     "stylelint-prettier": "^2.0.0",
+    "sucrase": "^3.29.0",
     "typescript": "^4.7.2",
     "vue-eslint-parser": "^9.1.0"
   },
@@ -49,11 +51,12 @@
     "bootstrap": "lerna bootstrap -- --hoist",
     "playground:dev": "lerna run --scope playground dev",
     "playground:genIconsList": "lerna run --scope playground genIconsList",
-    "publish:package": "lerna publish from-package --yes",
     "buildUtils": "gulp buildUtils",
     "buildHeadless": "gulp buildHeadless",
     "buildTypes": "gulp buildTypes",
-    "buildBatch": "gulp buildBatch"
+    "buildBatch": "gulp buildBatch",
+    "publish:package": "lerna publish from-package --yes",
+    "test-run-esm": "node -r sucrase/register scripts/run-esm.js"
   },
   "engines": {
     "npm": "We recommend installing dependencies with yarn",

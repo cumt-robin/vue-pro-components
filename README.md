@@ -1,3 +1,35 @@
+# 快速上手
+
+由于 .npmrc 中要设置 _authToken，用于免密 publish，而 _authToken 信息比较私密，就不适合写死放在 .npmrc 中，可以用环境变量替代。
+
+这里要考虑 2 种情况，一个是本地化发布，一个是在 CI/CD 中发布。
+
+首先说后面一种情况，在 CI/CD 中发布 npm 包已经有比较标准的方案了，大部分 CI/CD 平台都支持在 workflow 中指定环境变量，并且支持加密，没有暴露 token 的风险。npm 也有相关的配置文档，见[Set the token as an environment variable on the CI/CD server](https://docs.npmjs.com/using-private-packages-in-a-ci-cd-workflow#set-the-token-as-an-environment-variable-on-the-cicd-server)。
+
+关键配置如下：
+
+```
+steps:
+  - run: |
+      npm install
+  - env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+```
+
+那么关键还是在于前面那种情况，有时候需要在本地发布，此时应该怎么办呢？我尝试添加系统环境变量也没有成功，还尝试了`dotenv`，不过也不太方便，只要`.npmrc`中存在变量，只要跑任何`npm scripts`，都会去寻找`${NPM_TOKEN}`。我们不可能给所有脚本都加上`dotenv`。
+
+所以如果要在本地发布，一个替代方法是临时手动将`.npmrc`的 token 写死，改成：
+
+```
+//registry.npmjs.org/:_authToken=npm_xxxxxxxxxxxxxxxxxx
+```
+
+但是 lerna publish 的时候又需要一个干净的 git 状态，如果有 modified files 也不行（因为改了 .npmrc 就不干净了）。啊，真难。最理想的办法还是把环境变量给搞定，同时又不能改太多脚本。
+
+最后发现加系统环境变量是有用的，关键是改了后要重新 VSCode，果然还得是重启大法。
+
+# 下面是专栏相关文章入口
+
 > 本文为稀土掘金技术社区首发签约文章，14天内禁止转载，14天后未获授权禁止转载，侵权必究！
 > 
 > 专栏下篇文章传送门：[组件库技术选型和开发环境搭建](https://juejin.cn/post/7153432538046791687)
