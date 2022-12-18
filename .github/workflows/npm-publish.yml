@@ -8,6 +8,9 @@ on:
     branches:
     - c*
 
+env:
+  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
@@ -16,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn install --frozen-lockfile
-      - run: yarn release
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Install Dependency
+        run: yarn install --frozen-lockfile
+      - name: Build and Publish
+        run: yarn release
