@@ -56,6 +56,7 @@
     "buildTypes": "gulp buildTypes",
     "buildBatch": "gulp buildBatch",
     "publish:package": "lerna publish from-package --yes",
+    "release": "yarn buildBatch && yarn publish:package",
     "test-run-esm": "node -r sucrase/register scripts/run-esm.js"
   },
   "engines": {
