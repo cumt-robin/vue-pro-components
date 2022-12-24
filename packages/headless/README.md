@@ -1,11 +1,5 @@
-# `@vue-pro-components/headless`
-
-> TODO: description
-
-## Usage
+## 安装
 
 ```
-const headless = require('@vue-pro-components/headless');
-
-// TODO: DEMONSTRATE API
+yarn add @vue-pro-components/headless
 ```
