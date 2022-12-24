@@ -5,7 +5,9 @@
   "version": "independent",
   "npmClient": "yarn",
   "packages": [
-    "packages/utils"
+    "packages/utils",
+    "packages/headless",
+    "packages/type"
   ],
   "command": {
     "publish": {
