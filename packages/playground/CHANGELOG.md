@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/cumt-robin/vue-pro-components/compare/playground@2.3.0...playground@2.3.1) (2022-12-24)
+
+**Note:** Version bump only for package playground
+
 # [2.3.0](https://github.com/cumt-robin/vue-pro-components/compare/playground@2.2.4...playground@2.3.0) (2022-12-24)
 
 ### Features
