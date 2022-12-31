@@ -62,6 +62,7 @@ module.exports = {
         "no-nested-ternary": "off",
         "no-shadow": "off",
         "default-param-last": "off",
+        "consistent-return": "off",
         'import/prefer-default-export': 'off',
         'import/extensions': 'off',
         'import/no-named-as-default': 'off',

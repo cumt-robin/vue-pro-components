@@ -5,3 +5,5 @@ packages/*/es
 packages/*/lib
 packages/*/types
 .env.local
+.eslintcache
+.stylelintcache
