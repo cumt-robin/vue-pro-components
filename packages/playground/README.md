@@ -26,3 +26,5 @@ chore
 build
 
 feat
+
+style
