@@ -12,6 +12,9 @@
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"
+    },
+    "version": {
+      "changelogPreset": "angular"
     }
   }
 }

@@ -28,3 +28,5 @@ build
 feat
 
 style
+
+ci
