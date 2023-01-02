@@ -4,6 +4,25 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap -- --hoist",
+    "playground:dev": "lerna run --scope playground dev",
+    "playground:genIconsList": "lerna run --scope playground genIconsList",
+    "bump-version": "lerna version --conventional-commits --create-release github --yes",
+    "buildUtils": "gulp buildUtils",
+    "buildHeadless": "gulp buildHeadless",
+    "buildTypes": "gulp buildTypes",
+    "buildBatch": "gulp buildBatch",
+    "publish:package": "lerna publish from-package --yes",
+    "create-release": "yarn bump-version",
+    "release:ci": "yarn buildBatch && yarn publish:package",
+    "test-run-esm": "node -r sucrase/register scripts/run-esm.js",
+    "lint": "eslint packages --cache --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
+    "lint-fix": "eslint packages --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
+    "lint-style": "stylelint packages/**/src/**/*.{vue,css,less} --cache",
+    "lint-style-fix": "stylelint packages/**/src/**/*.{vue,css,less} --cache --fix",
+    "prepare": "husky install"
+  },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
@@ -17,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
     "commitizen": "^4.2.6",
+    "conventional-changelog-cli": "^2.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.0.1",
@@ -53,24 +73,6 @@
     "sucrase": "^3.29.0",
     "typescript": "^4.7.2",
     "vue-eslint-parser": "^9.1.0"
-  },
-  "scripts": {
-    "bootstrap": "lerna bootstrap -- --hoist",
-    "playground:dev": "lerna run --scope playground dev",
-    "playground:genIconsList": "lerna run --scope playground genIconsList",
-    "bumpVersion": "lerna version --conventional-commits --yes",
-    "buildUtils": "gulp buildUtils",
-    "buildHeadless": "gulp buildHeadless",
-    "buildTypes": "gulp buildTypes",
-    "buildBatch": "gulp buildBatch",
-    "publish:package": "lerna publish from-package --yes",
-    "release": "yarn buildBatch && yarn publish:package",
-    "test-run-esm": "node -r sucrase/register scripts/run-esm.js",
-    "lint": "eslint packages --cache --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
-    "lint-fix": "eslint packages --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
-    "lint-style": "stylelint packages/**/src/**/*.{vue,css,less} --cache",
-    "lint-style-fix": "stylelint packages/**/src/**/*.{vue,css,less} --cache --fix",
-    "prepare": "husky install"
   },
   "engines": {
     "npm": "We recommend installing dependencies with yarn",
