@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.3.0...@vue-pro-components/utils@0.4.0) (2023-01-03)
+
+### Features
+
+-   新增 getDateByOffset 方法 ([97c68a2](https://github.com/cumt-robin/vue-pro-components/commit/97c68a2560d94f69451a8c694ba495d1a0c4ca8f))
+
 # [0.3.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.2.2...@vue-pro-components/utils@0.3.0) (2022-12-24)
 
 ### Bug Fixes
