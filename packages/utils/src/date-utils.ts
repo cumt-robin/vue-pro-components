@@ -1,5 +1,5 @@
 import type { PlainObject } from '@vue-pro-components/types'
-import type { ManipulateType } from 'dayjs'
+import type { ManipulateType, QUnitType, OpUnitType } from 'dayjs'
 import dayjs from 'dayjs'
 
 export const DATE_STANDARD_FORMAT = 'YYYY-MM-DD HH:mm:ss'
@@ -36,4 +36,10 @@ export function getDateByOffset(date: DayjsInput = new Date(), options: DayjsAdd
     }
     const _date = dayjs(date).add(mergedOptions.offset, mergedOptions.unit)
     return _date.format(mergedOptions.format)
+}
+
+export function getTimeInterval(dateStr1: DayjsInput, dateStr2: DayjsInput, unit: QUnitType | OpUnitType = 'minute'): number {
+    const date1 = dayjs(dateStr1)
+    const date2 = dayjs(dateStr2)
+    return Math.abs(date1.diff(date2, unit, true))
 }
