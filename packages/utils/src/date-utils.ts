@@ -1,3 +1,5 @@
+import type { PlainObject } from '@vue-pro-components/types'
+import type { ManipulateType } from 'dayjs'
 import dayjs from 'dayjs'
 
 export const DATE_STANDARD_FORMAT = 'YYYY-MM-DD HH:mm:ss'
@@ -10,6 +12,28 @@ export const ONE_DAY_MILLSECONDS = 86400000
 
 export const ONE_WEEK_MILLSECONDS = ONE_DAY_MILLSECONDS * 7
 
-export function format(date: Parameters<typeof dayjs>[0] = new Date(), fmt = DATE_STANDARD_FORMAT): string {
+type DayjsInput = Parameters<typeof dayjs>[0]
+
+interface DayjsAddOption extends PlainObject {
+    offset: number
+    unit: ManipulateType
+    format: string
+}
+
+export function format(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT): string {
     return dayjs(date).format(fmt)
+}
+
+export function getDateByOffset(date: DayjsInput = new Date(), options: DayjsAddOption): string {
+    const defaultOptions: DayjsAddOption = {
+        offset: 0,
+        unit: 'd',
+        format: DATE_STANDARD_FORMAT,
+    }
+    const mergedOptions: DayjsAddOption = {
+        ...defaultOptions,
+        ...options,
+    }
+    const _date = dayjs(date).add(mergedOptions.offset, mergedOptions.unit)
+    return _date.format(mergedOptions.format)
 }
