@@ -8,7 +8,7 @@
     "bootstrap": "lerna bootstrap -- --hoist",
     "playground:dev": "lerna run --scope playground dev",
     "playground:genIconsList": "lerna run --scope playground genIconsList",
-    "bump-version": "lerna version --conventional-commits --create-release github --yes",
+    "bump-version": "lerna version --conventional-commits --create-release github --no-private --yes",
     "buildUtils": "gulp buildUtils",
     "buildHeadless": "gulp buildHeadless",
     "buildTypes": "gulp buildTypes",
