@@ -19,8 +19,6 @@ module.exports = {
     npm: {
         // 不做 npm publish 操作，交给 ci/cd 执行
         publish: false,
-        // ignore package.json version，以 git tag 为准
-        ignoreVersion: true,
     },
     hooks: {
         // 更新子包版本号
