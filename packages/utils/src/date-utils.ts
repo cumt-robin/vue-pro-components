@@ -43,3 +43,14 @@ export function getTimeInterval(dateStr1: DayjsInput, dateStr2: DayjsInput, unit
     const date2 = dayjs(dateStr2)
     return Math.abs(date1.diff(date2, unit, true))
 }
+
+export function getDayStart(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0): string | number {
+    let res = dayjs(date).startOf('day')
+    if (typeof offset === 'number' && offset !== 0) {
+        res = offset > 0 ? res.add(offset, 'd') : res.subtract(Math.abs(offset), 'd')
+    }
+    if (fmt === 'valueOf') {
+        return res.valueOf()
+    }
+    return res.format(fmt)
+}
