@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.6.0...@vue-pro-components/utils@0.7.0) (2023-01-05)
+
+### Features
+
+-   增加 getDayEnd 方法 ([00d54e6](https://github.com/cumt-robin/vue-pro-components/commit/00d54e6a538e219df991347662c3a4b790fd3a0a))
+
 # [0.6.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.5.0...@vue-pro-components/utils@0.6.0) (2023-01-05)
 
 ### Features
