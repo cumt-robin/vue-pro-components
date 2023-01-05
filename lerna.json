@@ -15,7 +15,8 @@
       "registry": "https://registry.npmjs.org"
     },
     "version": {
-      "changelogPreset": "angular"
+      "changelogPreset": "angular",
+      "message": "chore(release): publish"
     }
   }
 }
