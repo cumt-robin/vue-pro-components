@@ -54,3 +54,14 @@ export function getDayStart(date: DayjsInput = new Date(), fmt = DATE_STANDARD_F
     }
     return res.format(fmt)
 }
+
+export function getDayEnd(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0): string | number {
+    let res = dayjs(date).endOf('day')
+    if (typeof offset === 'number' && offset !== 0) {
+        res = offset > 0 ? res.add(offset, 'd') : res.subtract(Math.abs(offset), 'd')
+    }
+    if (fmt === 'valueOf') {
+        return res.valueOf()
+    }
+    return res.format(fmt)
+}
