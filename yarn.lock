@@ -2417,6 +2417,16 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
+"@release-it/conventional-changelog@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.npmmirror.com/@release-it/conventional-changelog/-/conventional-changelog-5.1.1.tgz#5e3affbe8d1814fe47d89777e3375a8a90c073b5"
+  integrity sha512-QtbDBe36dQfzexAfDYrbLPvd5Cb5bMWmLcjcGhCOWBss7fe1/gCjoxDULVz+7N7G5Nu2UMeBwHcUp/w8RDh5VQ==
+  dependencies:
+    concat-stream "^2.0.0"
+    conventional-changelog "^3.1.25"
+    conventional-recommended-bump "^6.1.0"
+    semver "7.3.8"
+
 "@rollup/plugin-commonjs@^23.0.4":
   version "23.0.4"
   resolved "https://registry.npmmirror.com/@rollup/plugin-commonjs/-/plugin-commonjs-23.0.4.tgz#854e9b1a83f0a715ded70a2ae411bebc11141de2"
@@ -4330,7 +4340,7 @@ conventional-changelog-writer@^5.0.0:
     split "^1.0.0"
     through2 "^4.0.0"
 
-conventional-changelog@^3.1.24:
+conventional-changelog@^3.1.24, conventional-changelog@^3.1.25:
   version "3.1.25"
   resolved "https://registry.npmmirror.com/conventional-changelog/-/conventional-changelog-3.1.25.tgz#3e227a37d15684f5aa1fb52222a6e9e2536ccaff"
   integrity sha512-ryhi3fd1mKf3fSjbLXOfK2D06YwKNic1nC9mWqybBHdObPd8KJ2vjaXZfYj1U23t+V8T8n0d7gwnc9XbIdFbyQ==
