@@ -1,5 +1,7 @@
 
 
+# [0.2.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/headless@0.2.4...0.2.0) (2023-01-05)
+
 # [0.1.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/headless@0.2.2...0.1.0) (2023-01-05)
 
 
