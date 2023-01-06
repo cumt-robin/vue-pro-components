@@ -22,7 +22,7 @@ module.exports = {
     },
     hooks: {
         // 更新子包版本号
-        "before:npm:bump": "yarn packages-bump-version",
+        "before:init": "yarn packages-bump-version",
         'after:release': 'echo Successfully released ${name} v${version} to ${repo.repository}.',
     },
 }
