@@ -16,7 +16,7 @@
     },
     "version": {
       "changelogPreset": "angular",
-      "message": "chore(release): publish"
+      "message": "chore(bump): bump version for packages"
     }
   }
 }
