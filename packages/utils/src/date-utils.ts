@@ -65,3 +65,7 @@ export function getDayEnd(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FOR
     }
     return res.format(fmt)
 }
+
+export function getOneDayRange(date = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0) {
+    return [getDayStart(date, fmt, offset), getDayEnd(date, fmt, offset)]
+}
