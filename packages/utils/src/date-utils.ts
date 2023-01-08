@@ -66,6 +66,12 @@ export function getDayEnd(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FOR
     return res.format(fmt)
 }
 
-export function getOneDayRange(date = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0) {
+export function getOneDayRange(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0) {
     return [getDayStart(date, fmt, offset), getDayEnd(date, fmt, offset)]
+}
+
+export function isBefore(date1: DayjsInput, date2: DayjsInput) {
+    const dayjs1 = dayjs(date1)
+    const dayjs2 = dayjs(date2)
+    return dayjs1.isBefore(dayjs2)
 }

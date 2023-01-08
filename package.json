@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "workspaces": [
     "packages/*"
   ],
@@ -9,7 +9,9 @@
     "bootstrap": "lerna bootstrap -- --hoist",
     "playground:dev": "lerna run --scope playground dev",
     "playground:genIconsList": "lerna run --scope playground genIconsList",
-    "packages-bump-version": "lerna version --conventional-commits --no-private --yes",
+    "packages-bump-version": "lerna version --conventional-commits --no-git-tag-version --no-push --no-private --yes",
+    "commit-packages-version-info": "git add . && git commit -m \"chore: bump packages version\"",
+    "determine-packages-version": "yarn packages-bump-version && yarn commit-packages-version-info",
     "buildUtils": "gulp buildUtils",
     "buildHeadless": "gulp buildHeadless",
     "buildTypes": "gulp buildTypes",
