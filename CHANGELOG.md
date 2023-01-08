@@ -1,5 +1,7 @@
 
 
+## [0.6.1](https://github.com/cumt-robin/vue-pro-components/compare/0.6.0...0.6.1) (2023-01-08)
+
 # [0.6.0](https://github.com/cumt-robin/vue-pro-components/compare/0.4.0...0.6.0) (2023-01-08)
 
 
