@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2023-01-08)
+
+
+### Bug Fixes
+
+* 修改publishConfig ([bcae06d](https://github.com/cumt-robin/vue-pro-components/commit/bcae06d05fc8c8f80426f232f4d70e99baef76fc))
+
+
+### Features
+
+* 支持headless打包 ([a8917ef](https://github.com/cumt-robin/vue-pro-components/commit/a8917ef49b5877382ef5a369ead64b10c3b32d84))
+* headless ([f2199f8](https://github.com/cumt-robin/vue-pro-components/commit/f2199f84e4f7acb3585ad4a95d87c2949f193cc1))
+* headless fullscreen完善 ([0ef401f](https://github.com/cumt-robin/vue-pro-components/commit/0ef401f19dc866c177cf25c0c6d882f833ef9672))
+
+
+
+
+
+
 ## [0.3.1](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/headless@0.3.0...@vue-pro-components/headless@0.3.1) (2023-01-08)
 
 **Note:** Version bump only for package @vue-pro-components/headless
