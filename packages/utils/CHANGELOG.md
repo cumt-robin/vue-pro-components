@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.8.0...@vue-pro-components/utils@0.9.0) (2023-01-08)
+
+### Features
+
+-   增加 getOneDayRange 方法 ([295c6e2](https://github.com/cumt-robin/vue-pro-components/commit/295c6e2399d3e86eddc7fa040371fc20f4e8506f))
+
 # 0.8.0 (2023-01-06)
 
 ### Bug Fixes

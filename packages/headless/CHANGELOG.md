@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/headless@0.3.0...@vue-pro-components/headless@0.3.1) (2023-01-08)
+
+**Note:** Version bump only for package @vue-pro-components/headless
+
 # 0.3.0 (2023-01-06)
 
 ### Bug Fixes

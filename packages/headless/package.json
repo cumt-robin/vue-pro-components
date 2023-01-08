@@ -1,6 +1,6 @@
 {
     "name": "@vue-pro-components/headless",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "headless ui for vue-pro-components",
     "keywords": [
         "headless",
@@ -35,7 +35,7 @@
         "vue": "^3.2.45"
     },
     "dependencies": {
-        "@vue-pro-components/utils": "^0.8.0"
+        "@vue-pro-components/utils": "^0.9.0"
     },
     "gitHead": "332d90f75db2f7a2daff8f964e51abd59aa8e52b"
 }
