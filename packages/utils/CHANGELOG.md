@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.11.0...@vue-pro-components/utils@0.12.0) (2023-01-11)
+
+### Code Refactoring
+
+-   **date-utils:** 重构 getDayStart, getDayEnd, getOneDayRange ([1118ca6](https://github.com/cumt-robin/vue-pro-components/commit/1118ca698cc72db6beaf761bd60fbaa1fd6efcb3))
+
+### BREAKING CHANGES
+
+-   **date-utils:** 重构 getDayStart, getDayEnd, getOneDayRange
+
 # 0.11.0 (2023-01-11)
 
 ### Bug Fixes
