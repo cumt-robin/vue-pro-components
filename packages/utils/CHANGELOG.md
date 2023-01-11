@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.12.0...@vue-pro-components/utils@0.13.0) (2023-01-11)
+
+### Features
+
+-   新增 getWeekStart 方法 ([ae05485](https://github.com/cumt-robin/vue-pro-components/commit/ae054859564d76f4cbd18b56ad986beead58b747))
+
 # [0.12.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.11.0...@vue-pro-components/utils@0.12.0) (2023-01-11)
 
 ### Code Refactoring
