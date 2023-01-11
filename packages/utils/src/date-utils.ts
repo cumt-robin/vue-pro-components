@@ -44,10 +44,22 @@ export function getTimeInterval(dateStr1: DayjsInput, dateStr2: DayjsInput, unit
     return Math.abs(date1.diff(date2, unit, true))
 }
 
-export function getDayStart(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0): string | number {
-    let res = dayjs(date).startOf('day')
+interface GetDatePointOption {
+    type: 'start' | 'end'
+    date?: DayjsInput
+    fmt?: string
+    unit?: ManipulateType
+    offset?: number
+}
+
+export function getDatePoint(
+    { type, date = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0, unit = 'd' }: GetDatePointOption = { type: 'start' }
+): string | number {
+    const dayjsObj = dayjs(date)
+    // ManipulateType 赋值给 OpUnitType 是安全的
+    let res = type === 'start' ? dayjsObj.startOf(unit) : dayjsObj.endOf(unit)
     if (typeof offset === 'number' && offset !== 0) {
-        res = offset > 0 ? res.add(offset, 'd') : res.subtract(Math.abs(offset), 'd')
+        res = offset > 0 ? res.add(offset, unit) : res.subtract(Math.abs(offset), unit)
     }
     if (fmt === 'valueOf') {
         return res.valueOf()
@@ -55,19 +67,26 @@ export function getDayStart(date: DayjsInput = new Date(), fmt = DATE_STANDARD_F
     return res.format(fmt)
 }
 
-export function getDayEnd(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0): string | number {
-    let res = dayjs(date).endOf('day')
-    if (typeof offset === 'number' && offset !== 0) {
-        res = offset > 0 ? res.add(offset, 'd') : res.subtract(Math.abs(offset), 'd')
-    }
-    if (fmt === 'valueOf') {
-        return res.valueOf()
-    }
-    return res.format(fmt)
+type GetSpecifiedDatePointOption = Omit<GetDatePointOption, 'unit' | 'type'>
+
+export function getDayStart(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'start',
+        unit: 'd',
+    })
+}
+
+export function getDayEnd(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'end',
+        unit: 'd',
+    })
 }
 
 export function getOneDayRange(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0) {
-    return [getDayStart(date, fmt, offset), getDayEnd(date, fmt, offset)]
+    return [getDayStart({ date, fmt, offset }), getDayEnd({ date, fmt, offset })]
 }
 
 export function isBefore(date1: DayjsInput, date2: DayjsInput) {
