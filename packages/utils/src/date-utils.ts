@@ -75,3 +75,7 @@ export function isBefore(date1: DayjsInput, date2: DayjsInput) {
     const dayjs2 = dayjs(date2)
     return dayjs1.isBefore(dayjs2)
 }
+
+export function isSameDay(date1: DayjsInput, date2: DayjsInput) {
+    return format(date1, 'YYYY-MM-DD') === format(date2, 'YYYY-MM-DD')
+}
