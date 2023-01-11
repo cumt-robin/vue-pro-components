@@ -1,6 +1,6 @@
 {
     "name": "vue-pro-components",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "pro components based on vue3",
     "keywords": [
         "pro",
@@ -40,14 +40,14 @@
     },
     "dependencies": {
         "@ant-design/icons-vue": "^6.1.0",
-        "@vue-pro-components/headless": "^0.4.0",
-        "@vue-pro-components/utils": "^0.10.0",
+        "@vue-pro-components/headless": "^0.5.0",
+        "@vue-pro-components/utils": "^0.11.0",
         "ant-design-vue": "^3.2.15",
         "lodash-es": "^4.17.21"
     },
     "devDependencies": {
         "@types/lodash-es": "^4.17.6",
-        "@vue-pro-components/types": "^0.2.0"
+        "@vue-pro-components/types": "^0.3.0"
     },
     "gitHead": "332d90f75db2f7a2daff8f964e51abd59aa8e52b"
 }
