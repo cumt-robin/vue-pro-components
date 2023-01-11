@@ -23,7 +23,8 @@
     "lint-fix": "eslint packages --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
     "lint-style": "stylelint packages/**/src/**/*.{vue,css,less} --cache",
     "lint-style-fix": "stylelint packages/**/src/**/*.{vue,css,less} --cache --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "sync-remote-tags": "git tag -l | xargs git tag -d && git pull --tags"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
