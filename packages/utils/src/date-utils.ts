@@ -89,6 +89,22 @@ export function getOneDayRange(date: DayjsInput = new Date(), fmt = DATE_STANDAR
     return [getDayStart({ date, fmt, offset }), getDayEnd({ date, fmt, offset })]
 }
 
+export function getWeekStart(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'start',
+        unit: 'w',
+    })
+}
+
+export function getWeekEnd(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'end',
+        unit: 'w',
+    })
+}
+
 export function isBefore(date1: DayjsInput, date2: DayjsInput) {
     const dayjs1 = dayjs(date1)
     const dayjs2 = dayjs(date2)
@@ -97,12 +113,4 @@ export function isBefore(date1: DayjsInput, date2: DayjsInput) {
 
 export function isSameDay(date1: DayjsInput, date2: DayjsInput) {
     return format(date1, 'YYYY-MM-DD') === format(date2, 'YYYY-MM-DD')
-}
-
-export function getWeekStart(option: GetSpecifiedDatePointOption) {
-    return getDatePoint({
-        ...option,
-        type: 'start',
-        unit: 'w',
-    })
 }
