@@ -1,4 +1,4 @@
-module.exports = {
+const options = {
     git: {
         // 具体参考源码 https://github.com/release-it/release-it/blob/master/lib/plugin/git/Git.js
         addUntrackedFiles: true,
@@ -21,8 +21,15 @@ module.exports = {
         publish: false,
     },
     hooks: {
-        // 更新子包版本号
-        "before:init": "yarn packages-bump-version",
         'after:release': 'echo Successfully released ${name} v${version} to ${repo.repository}.',
     },
 }
+
+if (process.env.MANUAL_LERNA_VERSION) {
+    // 更新子包版本号
+    options.hooks["before:init"] = "yarn packages-manual-bump-version"
+} else {
+    options.hooks["before:init"] = "yarn packages-bump-version"
+}
+
+module.exports = options

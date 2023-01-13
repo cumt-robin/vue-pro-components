@@ -2735,6 +2735,27 @@
     "@volar/typescript" "1.0.9"
     "@volar/vue-language-core" "1.0.9"
 
+"@vue-pro-components/headless@^0.2.2", "@vue-pro-components/headless@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.npmmirror.com/@vue-pro-components/headless/-/headless-0.2.3.tgz#f5f1f27b2318bf9685c06c24f6023c465519b0c6"
+  integrity sha512-Ju3+JcqRMX9vNBfjuP01/I2BbtZX5CkG9uzfqUi4+CWUp1l47ON/LqqMG3gvf1bo7BnRI1ziDtanFjSXuCs8Vg==
+  dependencies:
+    "@vue-pro-components/utils" "^0.6.0"
+
+"@vue-pro-components/utils@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.npmmirror.com/@vue-pro-components/utils/-/utils-0.5.0.tgz#9b43ad51941da4ce2c77e2a0ba6bb6f65a85607a"
+  integrity sha512-U64WTBsMcJWVTRm4lFcrpinp+ieCpqu0Cx3JuGgqG9IHkZ08G9XMw/Bml2QNKmyrlyVRRS9cU2KyIroB+Gwakw==
+  dependencies:
+    dayjs "^1.11.7"
+
+"@vue-pro-components/utils@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.npmmirror.com/@vue-pro-components/utils/-/utils-0.6.0.tgz#f572dc4c5dc0603036b07cb0b106993d71a52957"
+  integrity sha512-zUPWcjlflFygf2tIXOHAM4vpiQxfBLERxVCpsAK9qQooJK6DRo2TIeOijy+EcrGYsfquvTeoho6/BG196SlC1g==
+  dependencies:
+    dayjs "^1.11.7"
+
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npmmirror.com/@vue/babel-helper-vue-transform-on/-/babel-helper-vue-transform-on-1.0.2.tgz#9b9c691cd06fc855221a2475c3cc831d774bc7dc"
@@ -4469,7 +4490,14 @@ create-require@^1.1.0:
   resolved "https://registry.npmmirror.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cross-spawn@^7.0.2, cross-spawn@^7.0.3:
+cross-env@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.npmmirror.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+  integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
+  dependencies:
+    cross-spawn "^7.0.1"
+
+cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
   integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
@@ -11544,6 +11572,17 @@ vue-eslint-parser@^9.0.1, vue-eslint-parser@^9.1.0:
     esquery "^1.4.0"
     lodash "^4.17.21"
     semver "^7.3.6"
+
+vue-pro-components@^0.2.2:
+  version "0.2.3"
+  resolved "https://registry.npmmirror.com/vue-pro-components/-/vue-pro-components-0.2.3.tgz#d7e84b2aa7cc76d931b6d0adaed2c5f0a9bc997f"
+  integrity sha512-GO+pQmlGmnkvp5Elhk5jikBNbktELjNEjX+h7PNhIF6F82n6BEfcMmFvfpdBGuIZHsX0OmAEdA410i87HfODFg==
+  dependencies:
+    "@ant-design/icons-vue" "^6.1.0"
+    "@vue-pro-components/headless" "^0.2.3"
+    "@vue-pro-components/utils" "^0.6.0"
+    ant-design-vue "^3.2.15"
+    lodash-es "^4.17.21"
 
 vue-template-compiler@^2.7.10:
   version "2.7.14"
