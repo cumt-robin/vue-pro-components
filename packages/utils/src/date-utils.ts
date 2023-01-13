@@ -85,7 +85,7 @@ export function getDayEnd(option: GetSpecifiedDatePointOption) {
     })
 }
 
-export function getOneDayRange(date: DayjsInput = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0) {
+export function getOneDayRange({ date = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0 }: GetSpecifiedDatePointOption = {}) {
     return [getDayStart({ date, fmt, offset }), getDayEnd({ date, fmt, offset })]
 }
 
