@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Create Release via NPM",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "create-release"
+            ],
+            "runtimeExecutable": "npm",
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        }
+    ]
+}

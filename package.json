@@ -26,6 +26,7 @@
     "lint-style": "stylelint packages/**/src/**/*.{vue,css,less} --cache",
     "lint-style-fix": "stylelint packages/**/src/**/*.{vue,css,less} --cache --fix",
     "prepare": "husky install",
+    "reset-soft": "git reset --soft HEAD~1",
     "sync-remote-tags": "git tag -l | xargs git tag -d && git pull --tags"
   },
   "devDependencies": {
