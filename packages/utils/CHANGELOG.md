@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.18.0...@vue-pro-components/utils@0.19.0) (2023-02-17)
+
+### Features
+
+-   新增 getYearStart 方法 ([a774ee8](https://github.com/cumt-robin/vue-pro-components/commit/a774ee8cd9d77ca590f1f0c46b3ed146a19cd4bc))
+
 # [0.18.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.17.0...@vue-pro-components/utils@0.18.0) (2023-02-17)
 
 ### Features
