@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.16.0...@vue-pro-components/utils@0.17.0) (2023-02-17)
+
+### Features
+
+-   新增 getMonthEnd 方法 ([0bdd0b2](https://github.com/cumt-robin/vue-pro-components/commit/0bdd0b2dc55ece0ae6ced99cc969a530f3ccce7f))
+
 # [0.16.0](https://github.com/cumt-robin/vue-pro-components/compare/@vue-pro-components/utils@0.15.0...@vue-pro-components/utils@0.16.0) (2023-02-17)
 
 ### Features
