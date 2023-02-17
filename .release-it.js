@@ -3,6 +3,7 @@ const options = {
         // 具体参考源码 https://github.com/release-it/release-it/blob/master/lib/plugin/git/Git.js
         addUntrackedFiles: true,
         commitMessage: 'chore: release v${version}',
+        tagMatch: "[0-9]*"
     },
     // 默认需要 GITHUB_TOKEN 环境变量，可以通过 tokenRef 定制
     github: {

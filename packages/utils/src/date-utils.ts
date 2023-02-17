@@ -117,6 +117,14 @@ export function getMonthStart(option: GetSpecifiedDatePointOption) {
     })
 }
 
+export function getMonthEnd(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'end',
+        unit: 'M',
+    })
+}
+
 export function isBefore(date1: DayjsInput, date2: DayjsInput) {
     const dayjs1 = dayjs(date1)
     const dayjs2 = dayjs(date2)
