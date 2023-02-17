@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/cumt-robin/vue-pro-components/compare/vue-pro-components@0.7.3...vue-pro-components@0.7.4) (2023-02-17)
+
+**Note:** Version bump only for package vue-pro-components
+
 ## [0.7.3](https://github.com/cumt-robin/vue-pro-components/compare/vue-pro-components@0.7.2...vue-pro-components@0.7.3) (2023-01-13)
 
 **Note:** Version bump only for package vue-pro-components
