@@ -109,6 +109,14 @@ export function getOneWeekRange({ date = new Date(), fmt = DATE_STANDARD_FORMAT,
     return [getWeekStart({ date, fmt, offset }), getWeekEnd({ date, fmt, offset })]
 }
 
+export function getMonthStart(option: GetSpecifiedDatePointOption) {
+    return getDatePoint({
+        ...option,
+        type: 'start',
+        unit: 'M',
+    })
+}
+
 export function isBefore(date1: DayjsInput, date2: DayjsInput) {
     const dayjs1 = dayjs(date1)
     const dayjs2 = dayjs(date2)
