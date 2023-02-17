@@ -1,5 +1,12 @@
 
 
+# [2.4.0](https://github.com/cumt-robin/vue-pro-components/compare/2.3.0...2.4.0) (2023-02-17)
+
+
+### Features
+
+* 新增 getYearStart 方法 ([a774ee8](https://github.com/cumt-robin/vue-pro-components/commit/a774ee8cd9d77ca590f1f0c46b3ed146a19cd4bc))
+
 # [2.3.0](https://github.com/cumt-robin/vue-pro-components/compare/2.1.0...2.3.0) (2023-02-17)
 
 
