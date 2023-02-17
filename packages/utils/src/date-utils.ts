@@ -125,6 +125,10 @@ export function getMonthEnd(option: GetSpecifiedDatePointOption) {
     })
 }
 
+export function getOneMonathRange({ date = new Date(), fmt = DATE_STANDARD_FORMAT, offset = 0 }: GetSpecifiedDatePointOption = {}) {
+    return [getMonthStart({ date, fmt, offset }), getMonthEnd({ date, fmt, offset })]
+}
+
 export function isBefore(date1: DayjsInput, date2: DayjsInput) {
     const dayjs1 = dayjs(date1)
     const dayjs2 = dayjs(date2)
