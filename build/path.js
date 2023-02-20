@@ -7,3 +7,5 @@ export const UTILS_PATH = resolve(ROOT_PATH, "./packages/utils");
 export const HEADLESS_PATH = resolve(ROOT_PATH, "./packages/headless");
 
 export const TYPES_PATH = resolve(ROOT_PATH, "./packages/types");
+
+export const UI_PATH = resolve(ROOT_PATH, "./packages/vue-pro-components");
