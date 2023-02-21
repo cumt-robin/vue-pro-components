@@ -1,6 +1,6 @@
 import { readFileSync } from "fs"
 import { resolve, relative } from "path"
-import { parse, compileStyle, compileScript } from "vue/compiler-sfc"
+import { parse, compileStyle, compileScript, compileTemplate } from "vue/compiler-sfc"
 import hash from "hash-sum";
 
 export async function test() {
@@ -24,6 +24,11 @@ export async function test() {
     const script = compileScript(descriptor, { id })
 
     console.log(script)
+
+    const template = compileTemplate({ source: descriptor.template.content, filename: descriptor.filename, id, scoped: false, slotted: descriptor.slotted })
+
+    console.log(template)
+    
 }
 
 test();
