@@ -20,7 +20,7 @@
     "release-it:dry-run": "release-it --dry-run",
     "manual-create-release": "cross-env MANUAL_LERNA_VERSION=1 release-it --only-version",
     "create-release": "release-it --ci",
-    "test-compiler-sfc": "node -r sucrase/register scripts/test-compiler-sfc.js",
+    "test-compiler-sfc": "node -r sucrase/register test/compiler-sfc/test-compiler-sfc.js",
     "test-run-esm": "node -r sucrase/register scripts/run-esm.js",
     "lint": "eslint packages --cache --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
     "lint-fix": "eslint packages --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.vue",
